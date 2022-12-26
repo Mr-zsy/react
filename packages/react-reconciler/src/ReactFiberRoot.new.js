@@ -145,8 +145,11 @@ export function createFiberRoot(
   onRecoverableError: null | ((error: mixed) => void),
   transitionCallbacks: null | TransitionTracingCallbacks,
 ): FiberRoot {
+  /**
+   * zsy: 创建一个fiber节点
+   */
   const root: FiberRoot = (new FiberRootNode(
-    containerInfo,
+    containerInfo,  // 挂载dom
     tag,
     hydrate,
     identifierPrefix,
